@@ -14,12 +14,12 @@ export function ThemeToggle() {
       onClick={toggleTheme}
       className="glass-effect bg-transparent border-white/20 text-white hover:bg-white/10 fixed top-4 right-4 z-50"
     >
-      {theme === 'prismatic' ? (
+      {theme === 'aurora' ? (
         <Sun className="h-4 w-4 mr-2" />
       ) : (
         <Moon className="h-4 w-4 mr-2" />
       )}
-      {theme === 'prismatic' ? 'Liquid' : 'Prismatic'}
+      {theme === 'aurora' ? 'Liquid' : 'aurora'}
     </Button>
   );
 }

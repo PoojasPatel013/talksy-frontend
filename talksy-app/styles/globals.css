@@ -75,6 +75,7 @@
 }
 
 .light {
+  --background: rgb(0, 0, 0);
   --foreground: white;
   --muted-foreground: #ccc;
   --card-foreground: white;
