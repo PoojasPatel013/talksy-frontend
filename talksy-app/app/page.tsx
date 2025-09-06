@@ -32,7 +32,7 @@ export default function HomePage() {
               <Button size="lg" className="text-lg px-8 animate-pulse-glow">
                 Join Talksy
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 glass-effect bg-transparent" asChild>
+              <Button size="lg" variant="outline" className="text-lg px-8 bg-black" asChild>
                 <Link href="/docs">Learn More</Link>
               </Button>
             </div>

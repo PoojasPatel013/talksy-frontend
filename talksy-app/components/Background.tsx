@@ -1,4 +1,4 @@
-'use client'
+ 'use client'
 
 import Aurora from './Aurora'
 import LiquidEther from './LiquidEther'
@@ -10,9 +10,9 @@ export default function Background() {
   return (
     <div className="fixed inset-0 -z-10">
       {theme === 'aurora' ? (
-        <Aurora intensity={1.5} speed={0.3} animationType="rotate3d" />
+        <Aurora speed={0.3} />
       ) : (
-        <LiquidEther />
+        <LiquidEther autoSpeed={0.1} />
       )}
     </div>
   )
