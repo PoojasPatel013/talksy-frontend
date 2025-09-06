@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
@@ -113,8 +114,8 @@ export default function LiquidEther({
     }
 
     const paletteTex = makePaletteTexture(colors);
-    // Hard-code transparent background vector (alpha 0)
-    const bgVec4 = new THREE.Vector4(0, 0, 0, 0);
+    // Hard-code black background vector (alpha 1)
+    const bgVec4 = new THREE.Vector4(0, 0, 0, 1);
 
     class CommonClass {
       width = 0;
@@ -137,7 +138,7 @@ export default function LiquidEther({
         this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         // Always transparent
         this.renderer.autoClear = false;
-        this.renderer.setClearColor(new THREE.Color(0x000000), 0);
+        this.renderer.setClearColor(new THREE.Color(0x000000), 1);
         this.renderer.setPixelRatio(this.pixelRatio);
         this.renderer.setSize(this.width, this.height);
         const el = this.renderer.domElement;

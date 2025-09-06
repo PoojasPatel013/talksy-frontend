@@ -54,7 +54,8 @@ export default function MembersPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative overflow-hidden text-white dark:text-foreground">
+      <div className="relative z-10">
       <Navbar />
 
       <div className="container px-4 py-12 mx-auto">
@@ -62,8 +63,8 @@ export default function MembersPage() {
           <Badge variant="secondary" className="mb-4">
             Our Team
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Meet the Talksy Team</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Meet the Talksy Team</h1>
+          <p className="text-xl text-white max-w-2xl mx-auto">
             The passionate people behind Talksy, working to create authentic connections in the digital world.
           </p>
         </div>
@@ -181,6 +182,7 @@ export default function MembersPage() {
             </CardContent>
           </Card>
         </section>
+      </div>
       </div>
     </div>
   )

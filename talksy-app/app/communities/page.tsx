@@ -118,7 +118,8 @@ export default function CommunitiesPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative overflow-hidden text-white dark:text-foreground">
+      <div className="relative z-10">
       <Navbar />
 
       <div className="container px-4 py-12 mx-auto">
@@ -126,8 +127,8 @@ export default function CommunitiesPage() {
           <Badge variant="secondary" className="mb-4">
             Communities
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Join Our Communities</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Join Our Communities</h1>
+          <p className="text-xl text-white max-w-2xl mx-auto">
             Find your tribe and connect with like-minded people across various interests and industries.
           </p>
         </div>
@@ -216,6 +217,7 @@ export default function CommunitiesPage() {
             </CardContent>
           </Card>
         </section>
+      </div>
       </div>
     </div>
   )

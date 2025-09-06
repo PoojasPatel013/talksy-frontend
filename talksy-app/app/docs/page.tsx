@@ -19,23 +19,24 @@ import {
 
 export default function DocsPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
+    <div className="min-h-screen relative overflow-hidden text-white dark:text-foreground">
+      <div className="relative z-10">
+        <Navbar />
 
       <div className="container px-4 py-12 mx-auto max-w-4xl">
         <div className="text-center mb-12 animate-fade-in-up">
           <Badge variant="secondary" className="mb-4 glass-effect">
             Documentation
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Talksy Documentation</h1>
-          <p className="text-xl text-muted-foreground">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Talksy Documentation</h1>
+          <p className="text-xl text-white">
             Everything you need to know about using Talksy for authentic conversations.
           </p>
         </div>
 
         {/* Features Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-foreground">Features</h2>
+          <h2 className="text-3xl font-bold mb-8 text-white">Features</h2>
 
           <div className="grid gap-6">
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
@@ -200,7 +201,7 @@ export default function DocsPage() {
 
         {/* Scope Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-foreground">Scope & Vision</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">Scope & Vision</h2>
           <Card className="glass-effect">
             <CardContent className="pt-6">
               <div className="space-y-4">
@@ -237,11 +238,11 @@ export default function DocsPage() {
 
         {/* How to Use Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-foreground">How to Use Talksy</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">How to Use Talksy</h2>
           <div className="space-y-6">
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-xl text-foreground">1. Getting Started</CardTitle>
+                 <CardTitle className="text-xl text-white">1. Getting Started</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -253,7 +254,7 @@ export default function DocsPage() {
 
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-xl text-foreground">2. Explore Communities</CardTitle>
+                <CardTitle className="text-xl text-white">2. Explore Communities</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -265,7 +266,7 @@ export default function DocsPage() {
 
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-xl text-foreground">3. Start Conversations</CardTitle>
+                <CardTitle className="text-xl text-white">3. Start Conversations</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -277,7 +278,7 @@ export default function DocsPage() {
 
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-xl text-foreground">4. Build Relationships</CardTitle>
+                <CardTitle className="text-xl text-white">4. Build Relationships</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -293,11 +294,11 @@ export default function DocsPage() {
 
         {/* What We Provide Section */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-foreground">What We Provide</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">What We Provide</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-foreground">Safe Environment</CardTitle>
+                <CardTitle className="text-white">Safe Environment</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -309,7 +310,7 @@ export default function DocsPage() {
 
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-foreground">Authentic Connections</CardTitle>
+                <CardTitle className="text-white">Authentic Connections</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -321,7 +322,7 @@ export default function DocsPage() {
 
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-foreground">Mental Health Support</CardTitle>
+                <CardTitle className="text-white">Mental Health Support</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -333,7 +334,7 @@ export default function DocsPage() {
 
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-foreground">Privacy Protection</CardTitle>
+                <CardTitle className="text-white">Privacy Protection</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -344,6 +345,7 @@ export default function DocsPage() {
             </Card>
           </div>
         </section>
+      </div>
       </div>
     </div>
   )

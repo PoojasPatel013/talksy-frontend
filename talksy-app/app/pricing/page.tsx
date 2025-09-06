@@ -6,7 +6,8 @@ import { Check, Star } from "lucide-react"
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative overflow-hidden text-white dark:text-foreground">
+      <div className="relative z-10">
       <Navbar />
 
       <div className="container px-4 py-12 mx-auto">
@@ -14,7 +15,7 @@ export default function PricingPage() {
           <Badge variant="secondary" className="mb-4 glass-effect">
             Pricing
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Choose Your Plan</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Choose Your Plan</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Start for free and upgrade when you're ready for more features and connections.
           </p>
@@ -152,11 +153,11 @@ export default function PricingPage() {
 
         {/* FAQ Section */}
         <div className="mt-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">Frequently Asked Questions</h2>
           <div className="space-y-6">
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-lg text-foreground">Can I change my plan anytime?</CardTitle>
+                 <CardTitle className="text-lg text-white">Can I change my plan anytime?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -168,7 +169,7 @@ export default function PricingPage() {
 
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-lg text-foreground">Is there a free trial for paid plans?</CardTitle>
+                <CardTitle className="text-lg text-white">Is there a free trial for paid plans?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -180,7 +181,7 @@ export default function PricingPage() {
 
             <Card className="glass-effect hover:animate-pulse-glow transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-lg text-foreground">What payment methods do you accept?</CardTitle>
+                <CardTitle className="text-lg text-white">What payment methods do you accept?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -191,6 +192,7 @@ export default function PricingPage() {
             </Card>
           </div>
         </div>
+      </div>
       </div>
     </div>
   )
