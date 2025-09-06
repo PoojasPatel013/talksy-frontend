@@ -4,26 +4,10 @@ import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/ca
 import { Badge } from "@/components/ui/badge"
 import { MessageCircle, Users, Heart, Shield, Zap, Globe } from "lucide-react"
 import Link from "next/link"
-import Prism from "@/components/prism"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      <div className="fixed inset-0 z-0">
-        <Prism
-          animationType="rotate"
-          timeScale={0.5}
-          height={3.5}
-          baseWidth={5.5}
-          scale={3.6}
-          hueShift={0}
-          colorFrequency={1}
-          noise={0.5}
-          glow={1}
-          transparent={true}
-        />
-      </div>
-
+    <div className="min-h-screen relative overflow-hidden text-white dark:text-foreground">
       <div className="relative z-10">
         <Navbar />
 

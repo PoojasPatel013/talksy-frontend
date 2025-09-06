@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Suspense } from "react"
 import "./globals.css"
+import Background from "@/components/Background"
 
 export const metadata: Metadata = {
   title: "Talksy - Real Vibes. Real Talks.",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense fallback={null}>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+            <Background />
             {children}
           </ThemeProvider>
         </Suspense>

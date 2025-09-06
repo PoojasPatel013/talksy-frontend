@@ -4,10 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
+  --background: oklch(100% 0.00011 271.152);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(97.998% 0.00532 16.096);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
@@ -74,6 +74,25 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+.light {
+  --foreground: white;
+  --muted-foreground: #ccc;
+  --card-foreground: white;
+  --popover-foreground: white;
+  --primary: white;
+  --primary-foreground: #121212;
+  --secondary: #333;
+  --secondary-foreground: white;
+  --accent: #333;
+  --accent-foreground: white;
+  --destructive: #ff4444;
+  --destructive-foreground: white;
+  --border: #555;
+  --input: #333;
+  --ring: white;
+  --sidebar-foreground: white;
+}
+
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -120,6 +139,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
   }
 }
