@@ -1,5 +1,6 @@
-
-- [x] Add LiquidEther div in hero section with slowed motion (autoSpeed=0.1)
-- [x] Add Aurora component in hero section
-- [x] Change page theme to white background and black fonts
-- [ ] Test the page
+- [x] Import useTheme in app/page.tsx
+- [x] Update h1 text color to conditional (black for aurora, white otherwise)
+- [x] Update p text color to conditional
+- [x] Update CardTitle and CardDescription text colors
+- [x] Update footer text color
+- [ ] Test the changes

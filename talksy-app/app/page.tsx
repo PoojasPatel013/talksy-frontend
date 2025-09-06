@@ -1,11 +1,15 @@
+'use client'
+
 import { Navbar } from "@/components/navbar"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { MessageCircle, Users, Heart, Shield, Zap, Globe } from "lucide-react"
 import Link from "next/link"
+import { useTheme } from "@/components/ThemeProvider"
 
 export default function HomePage() {
+  const { theme } = useTheme()
   return (
     <div className="min-h-screen relative overflow-hidden text-white dark:text-foreground">
       <div className="relative z-10">
@@ -17,8 +21,10 @@ export default function HomePage() {
             <Badge variant="secondary" className="mb-4 glass-effect animate-pulse-glow">
               Real Vibes. Real Talks.
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white animate-float">Welcome to Talksy</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <h1 className={`text-4xl md:text-6xl font-bold mb-6 animate-float ${theme === 'aurora' ? 'text-black' : 'text-white'}`}>
+              Welcome to Talksy
+            </h1>
+            <p className={`text-xl md:text-2xl mb-8 max-w-3xl mx-auto ${theme === 'aurora' ? 'text-black' : 'text-muted-foreground'}`}>
               A place to vibe, vent, and connect. Talksy brings real people together through real talks — no filters, no
               pressure.
             </p>
@@ -36,8 +42,10 @@ export default function HomePage() {
         {/* Features Grid */}
         <section className="container px-4 py-16 mx-auto">
           <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Why Choose Talksy?</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${theme === 'aurora' ? 'text-black' : 'text-white'}`}>
+              Why Choose Talksy?
+            </h2>
+            <p className={`text-xl max-w-2xl mx-auto ${theme === 'aurora' ? 'text-black' : 'text-muted-foreground'}`}>
               Experience authentic conversations in a safe, supportive environment designed for real connections.
             </p>
           </div>
@@ -45,8 +53,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Card className="border-2 hover:border-primary/50 transition-all duration-300 glass-effect hover:animate-pulse-glow">
               <CardHeader>
-                <MessageCircle className="h-12 w-12 text-white mb-4" />
-                <CardTitle className="text-white">Real Conversations</CardTitle>
+                <MessageCircle className={`h-12 w-12 mb-4 ${theme === 'aurora' ? 'text-black' : 'text-white'}`} />
+                <CardTitle className={`${theme === 'aurora' ? 'text-black' : 'text-white'}`}>
+                  Real Conversations
+                </CardTitle>
                 <CardDescription>
                   Engage in meaningful discussions without the pressure of perfect posts or viral content.
                 </CardDescription>
@@ -55,8 +65,10 @@ export default function HomePage() {
 
             <Card className="border-2 hover:border-primary/50 transition-all duration-300 glass-effect hover:animate-pulse-glow">
               <CardHeader>
-                <Users className="h-12 w-12 text-white mb-4" />
-                <CardTitle className="text-white">Safe Communities</CardTitle>
+                <Users className={`h-12 w-12 mb-4 ${theme === 'aurora' ? 'text-black' : 'text-white'}`} />
+                <CardTitle className={`${theme === 'aurora' ? 'text-black' : 'text-white'}`}>
+                  Safe Communities
+                </CardTitle>
                 <CardDescription>
                   Join topic-based groups where respect and authenticity are the foundation of every interaction.
                 </CardDescription>
@@ -65,8 +77,10 @@ export default function HomePage() {
 
             <Card className="border-2 hover:border-primary/50 transition-all duration-300 glass-effect hover:animate-pulse-glow">
               <CardHeader>
-                <Heart className="h-12 w-12 text-white mb-4" />
-                <CardTitle className="text-white">Emotional Support</CardTitle>
+                <Heart className={`h-12 w-12 mb-4 ${theme === 'aurora' ? 'text-black' : 'text-white'}`} />
+                <CardTitle className={`${theme === 'aurora' ? 'text-black' : 'text-white'}`}>
+                  Emotional Support
+                </CardTitle>
                 <CardDescription>
                   Find understanding and support through anonymous posting and empathetic community responses.
                 </CardDescription>
@@ -75,8 +89,10 @@ export default function HomePage() {
 
             <Card className="border-2 hover:border-primary/50 transition-all duration-300 glass-effect hover:animate-pulse-glow">
               <CardHeader>
-                <Shield className="h-12 w-12 text-white mb-4" />
-                <CardTitle className="text-white">Privacy First</CardTitle>
+                <Shield className={`h-12 w-12 mb-4 ${theme === 'aurora' ? 'text-black' : 'text-white'}`} />
+                <CardTitle className={`${theme === 'aurora' ? 'text-black' : 'text-white'}`}>
+                  Privacy First
+                </CardTitle>
                 <CardDescription>
                   Your privacy matters. Control your visibility and share only what you're comfortable with.
                 </CardDescription>
@@ -85,8 +101,10 @@ export default function HomePage() {
 
             <Card className="border-2 hover:border-primary/50 transition-all duration-300 glass-effect hover:animate-pulse-glow">
               <CardHeader>
-                <Zap className="h-12 w-12 text-white mb-4" />
-                <CardTitle className="text-white">Smart Matching</CardTitle>
+                <Zap className={`h-12 w-12 mb-4 ${theme === 'aurora' ? 'text-black' : 'text-white'}`} />
+                <CardTitle className={`${theme === 'aurora' ? 'text-black' : 'text-white'}`}>
+                  Smart Matching
+                </CardTitle>
                 <CardDescription>
                   Connect with like-minded people through our vibe-matching system and interest-based discovery.
                 </CardDescription>
@@ -95,8 +113,10 @@ export default function HomePage() {
 
             <Card className="border-2 hover:border-primary/50 transition-all duration-300 glass-effect hover:animate-pulse-glow">
               <CardHeader>
-                <Globe className="h-12 w-12 text-white mb-4" />
-                <CardTitle className="text-white">Global Reach</CardTitle>
+                <Globe className={`h-12 w-12 mb-4 ${theme === 'aurora' ? 'text-black' : 'text-white'}`} />
+                <CardTitle className={`${theme === 'aurora' ? 'text-black' : 'text-white'}`}>
+                  Global Reach
+                </CardTitle>
                 <CardDescription>
                   Connect with people worldwide while maintaining the intimacy of small group conversations.
                 </CardDescription>
@@ -108,8 +128,10 @@ export default function HomePage() {
         {/* CTA Section */}
         <section className="container px-4 py-16 mx-auto text-center">
           <div className="max-w-2xl mx-auto animate-fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Start Talking?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${theme === 'aurora' ? 'text-black' : 'text-white'}`}>
+              Ready to Start Talking?
+            </h2>
+            <p className={`text-xl mb-8 ${theme === 'aurora' ? 'text-black' : 'text-muted-foreground'}`}>
               Join thousands of people having real conversations every day.
             </p>
             <Button size="lg" className="text-lg px-8 animate-pulse-glow">
@@ -123,9 +145,13 @@ export default function HomePage() {
           <div className="container px-4 py-8 mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex items-center space-x-2 mb-4 md:mb-0">
-                <span className="text-xl font-bold text-white">Talksy</span>
+                <span className={`text-xl font-bold ${theme === 'aurora' ? 'text-black' : 'text-white'}`}>
+                  Talksy
+                </span>
               </div>
-              <p className="text-sm text-muted-foreground">© 2025 Talksy. All rights reserved.</p>
+              <p className={`text-sm ${theme === 'aurora' ? 'text-black' : 'text-muted-foreground'}`}>
+                © 2025 Talksy. All rights reserved.
+              </p>
             </div>
           </div>
         </footer>
